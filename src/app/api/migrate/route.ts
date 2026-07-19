@@ -3,6 +3,8 @@ import { Pool } from "pg";
 import fs from "fs";
 import path from "path";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const databaseUrl = process.env.DATABASE_URL;
 
