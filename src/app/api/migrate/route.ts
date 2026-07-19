@@ -12,6 +12,9 @@ export async function GET() {
 
   const pool = new Pool({
     connectionString: databaseUrl,
+    ssl: {
+      rejectUnauthorized: false,
+    },
   });
 
   const client = await pool.connect();
